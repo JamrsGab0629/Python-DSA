@@ -62,6 +62,26 @@ class linkedList:
         self.head = self.head.next
 
         
+    def getMid(self):
+        if self.head is None:
+            raise IndexError("No Elements please insert one")
+
+        count = 0
+
+        temp = self.head
+        while temp:
+            count += 1
+            temp = temp.next
+
+        mid = count // 2
+
+        curr = self.head
+        for i in range(mid):
+            curr = curr.next
+
+        return curr.val
+
+
 
 
 li = linkedList()
@@ -71,4 +91,4 @@ li.insertatbeginning(10)
 li.insertatend(100)
 li.insertatpos(30,1)
 li.printlist()
-
+print(li.getMid())
