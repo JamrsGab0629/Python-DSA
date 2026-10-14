@@ -24,7 +24,7 @@ class LinkedList:
     def printlist(self):
         temp = self.head
         while temp != None:
-            print(temp.val)
+            print(temp.val, end="->")
             temp = temp.next
 
     def reversedlist(self):
@@ -47,6 +47,8 @@ li.insert(12)
 li.insert(11)
 
 li.printlist()
+
+print("\n previous \n reversed")
 
 li.reversedlist()
 li.printlist()
