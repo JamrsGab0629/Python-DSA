@@ -28,6 +28,7 @@ class LinkedList:
             print(temp.val,end="->")
             temp = temp.next
             
+                        
     def detectCycle(self):
         fast = self.head 
         slow = self.head

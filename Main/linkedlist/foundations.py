@@ -90,5 +90,7 @@ li.insertatbeginning(10)
 
 li.insertatend(100)
 li.insertatpos(30,1)
-li.printlist()
+
 print(li.getMid())
+li.deletefirst()
+li.printlist()
