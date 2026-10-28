@@ -1,0 +1,38 @@
+=== Your machine ===
+Python 3.13.7 on Windows 10, CPU: Intel64 Family 6 Model 58 Stepping 9, GenuineIntel
+
+No usable documents found - using made-up text (about 750 words each) instead.
+  documents: 40, words per document: median 805, average 805, longest 805
+
+=== Test 1: reading text out of PDFs ===
+  no PDFs in that folder - skipped
+
+Loading sentence-transformers/all-MiniLM-L6-v2...
+
+=== Test 2: how much faster is it to read less? (all-MiniLM-L6-v2) ===
+  A. current script (150-word pieces, all text): 240 pieces, 26.1 s -> 0.65 s/doc -> 1,000 docs in 10.9 min  (101% of the text read)
+  B. 90-word pieces, 128 tokens, one big call: 360 pieces, 16.6 s -> 0.42 s/doc -> 1,000 docs in 6.9 min  (90% of the text read)
+  C. B + only the first 300 words of each file: 160 pieces, 6.6 s -> 0.17 s/doc -> 1,000 docs in 2.8 min  (34% of the text read)
+  D. C + remove duplicate pieces: 4 pieces, 0.3 s -> 0.01 s/doc -> 1,000 docs in 0.1 min  (1% of the text read)
+  -> D is 91.4x faster than A for these documents
+
+=== Test 3: int8 quantization (smaller and maybe faster) ===
+  normal: 23.7 pieces/sec;  int8: 21.3 pieces/sec  (0.90x), average similarity to the normal vectors: 0.924 (1.000 = identical)
+
+=== Test 4: how long does ONE search take? ===
+  turning the description into numbers: median 15 ms (worst 22 ms)
+  matching against 20,000 saved pieces: median 1.8 ms
+
+=== Test 5: starting the app (loading the model) ===
+  (runs the loading 4 times in fresh processes; about 2 to 3 minutes)
+  normal: importing the libraries 22.2 s + loading the model 1.8 s = 24.0 s
+  offline mode (HF_HUB_OFFLINE=1): importing the libraries 20.8 s + loading the model 0.4 s = 21.2 s
+
+=== Summary ===
+  A. current script (150-word pieces, all text): 1,000 docs in 10.9 min (101% of the text read)
+  B. 90-word pieces, 128 tokens, one big call: 1,000 docs in 6.9 min (90% of the text read)
+  C. B + only the first 300 words of each file: 1,000 docs in 2.8 min (34% of the text read)
+  D. C + remove duplicate pieces: 1,000 docs in 0.1 min (1% of the text read)
+  int8 quantization: 0.90x speed, similarity 0.924
+  One search: 15 ms for the description + 1.8 ms matching 20,000 pieces
+  Startup: normal 24.0 s vs offline mode 21.2 s

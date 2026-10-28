@@ -1,0 +1,26 @@
+=== Your machine ===
+Python 3.13.7 on Windows 10
+CPU: Intel64 Family 6 Model 58 Stepping 9, GenuineIntel
+PyTorch 2.14.1+cpu, threads: 4
+
+Making test images (this takes a minute)...
+
+=== Test 1: photo search model (CLIP ViT-B/32) ===
+Model loaded in 46.5 s
+  normal decode: decode 125 ms/photo, model 2.7 photos/sec, overall 2.0 photos/sec -> 1,000 photos in 8.2 min, 10,000 in 82 min
+  fast JPEG decode: decode 47 ms/photo, model 7.0 photos/sec, overall 5.2 photos/sec -> 1,000 photos in 3.2 min, 10,000 in 32 min
+  Real photos: type a description to see the top 3 matches (just press Enter to skip).
+  "a person smiling" -> Screenshot (101).png, Screenshot (123).png, Screenshot (124).png
+  "food on a table" -> Screenshot (124).png, Screenshot (123).png, Screenshot (128).png
+  "my full screen screen shot of my subdivision on google map" -> Screenshot (102).png, Screenshot (136).png, Screenshot (130).png
+
+=== Test 2: reading text inside images (OCR) ===
+  10 generated screenshots with English and Taglish text
+  RapidOCR: 1.18 s per screenshot, 100% of the words read correctly -> 1,000 screenshots in about 20 min
+  Tesseract: not installed (optional)
+
+=== Summary ===
+  CLIP, normal decode: 2.0 photos/sec (1,000 photos ~ 8.2 min)
+  CLIP, fast JPEG decode: 5.2 photos/sec (1,000 photos ~ 3.2 min)
+  RapidOCR: 1.18 s/image, 100% words correct
+  Tesseract: not installed (optional)

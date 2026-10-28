@@ -1,0 +1,27 @@
+=== Your machine ===
+Python 3.13.7 on Windows 10 (AMD64)
+CPU: Intel64 Family 6 Model 58 Stepping 9, GenuineIntel
+PyTorch 2.14.1+cpu, threads used: 4
+CPU instruction level PyTorch uses: DEFAULT
+
+=== English small (MiniLM-L6) ===
+Model loaded in 15.2 s (after the first download)
+  reads 128 tokens per piece: 21.6 pieces/sec  ->  5000 pieces in about 3.9 min
+  reads 256 tokens per piece: 8.8 pieces/sec  ->  5000 pieces in about 9.5 min
+  Search test (14 English/Tagalog/Taglish queries): right file first 11/14, in top 3: 12/14
+     missed: "magkano ang pamasahe at baon ko"
+     missed: "kailan ang due ng chapter 1"
+     missed: "typhoon preparation checklist"
+
+=== Multilingual small (e5) ===
+Model loaded in 44.6 s (after the first download)
+  reads 128 tokens per piece: 11.5 pieces/sec  ->  5000 pieces in about 7.3 min
+  reads 256 tokens per piece: 4.8 pieces/sec  ->  5000 pieces in about 17.4 min
+  Search test (14 English/Tagalog/Taglish queries): right file first 11/14, in top 3: 14/14
+     missed: "notes tungkol sa bulkan"
+     missed: "ano dapat gawin pag may bagyo"
+     missed: "ano pa ang kulang sa certificate at attendance"
+
+=== Summary ===
+English small (MiniLM-L6): 128 tokens: 3.9 min per 5000 pieces; 256 tokens: 9.5 min per 5000 pieces; search test 11/14 first, 12/14 top-3
+Multilingual small (e5): 128 tokens: 7.3 min per 5000 pieces; 256 tokens: 17.4 min per 5000 pieces; search test 11/14 first, 14/14 top-3
