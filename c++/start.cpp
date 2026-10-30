@@ -20,5 +20,5 @@ int main(){
         std::cout << " you are an adult senior ";
     }
 
-    return 0;
+   
 }
