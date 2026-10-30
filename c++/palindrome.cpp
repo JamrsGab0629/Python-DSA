@@ -8,7 +8,7 @@ bool is_palindrome(std::string word){
     int left = 0;
     int right =  word.length() - 1;
     while(left < right){
-        if (std::lower(word[left]) != std::lower(word[right])){
+        if (lower(std::word[left]) != std::lower(word[right])){
             return false;
         }
         left++;
