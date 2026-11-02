@@ -18,7 +18,7 @@ class Todo{
 
    }
    void remove(size_t index){
-      if (index > tasks.size()) throw std::out_of_range("The index task was not existing");
+      if (index >= tasks.size()) throw std::out_of_range("The index task was not existing");
          tasks.erase(tasks.begin() + index); 
    }
    void show_all() const{
