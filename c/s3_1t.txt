@@ -1,0 +1,4 @@
+Run  1: scenario=3 threads=1 n=1000000000 counter=0 | real=75.190 s user=76.458 s sys=0.748 s
+Run  2: scenario=3 threads=1 n=1000000000 counter=0 | real=76.588 s user=77.666 s sys=0.970 s
+Run  3: scenario=3 threads=1 n=1000000000 counter=0 | real=74.996 s user=76.365 s sys=0.832 s
+Average over 3 runs: real=75.591 s user=76.830 s sys=0.850 s

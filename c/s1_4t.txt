@@ -1,0 +1,11 @@
+Run  1: scenario=1 threads=4 n=1000000000 counter=0 | real=0.562 s user=1.850 s sys=0.024 s
+Run  2: scenario=1 threads=4 n=1000000000 counter=0 | real=0.522 s user=1.953 s sys=0.008 s
+Run  3: scenario=1 threads=4 n=1000000000 counter=0 | real=0.564 s user=2.185 s sys=0.037 s
+Run  4: scenario=1 threads=4 n=1000000000 counter=0 | real=0.552 s user=2.106 s sys=0.041 s
+Run  5: scenario=1 threads=4 n=1000000000 counter=0 | real=0.527 s user=2.000 s sys=0.032 s
+Run  6: scenario=1 threads=4 n=1000000000 counter=0 | real=0.516 s user=1.977 s sys=0.008 s
+Run  7: scenario=1 threads=4 n=1000000000 counter=0 | real=0.496 s user=1.875 s sys=0.008 s
+Run  8: scenario=1 threads=4 n=1000000000 counter=0 | real=0.476 s user=1.844 s sys=0.016 s
+Run  9: scenario=1 threads=4 n=1000000000 counter=0 | real=0.496 s user=1.946 s sys=0.008 s
+Run 10: scenario=1 threads=4 n=1000000000 counter=0 | real=0.490 s user=1.885 s sys=0.012 s
+Average over 10 runs: real=0.520 s user=1.962 s sys=0.019 s

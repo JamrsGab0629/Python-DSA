@@ -1,0 +1,2 @@
+Run  1: scenario=3 threads=4 n=1000000000 counter=0 | real=275.135 s user=266.480 s sys=457.604 s
+Average over 1 runs: real=275.135 s user=266.480 s sys=457.604 s
