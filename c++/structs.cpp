@@ -34,6 +34,6 @@ int main(){
     std::cin >> age;
     Studs s(name,age);
     s.printValue();
-
+    
     return 0;
 }
