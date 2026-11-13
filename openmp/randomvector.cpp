@@ -20,7 +20,7 @@ std::vector<int> v(n);
     double t0 = omp_get_wtime();
     for (int i = 0; i < n; ++i)
     sum_s += v[i];
-   double t1 = omp_get_wtime();
+    double t1 = omp_get_wtime();
    
     long long  sum = 0;
     double time1 = omp_get_wtime();
